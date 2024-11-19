@@ -1,0 +1,8 @@
+docker build -t mazin.azurecr.io/python-face-recognition:latest .
+docker push mazin.azurecr.io/python-face-recognition:latest
+
+az container delete --resource-group mazin --name python-face-recognition-container --yes
+
+powershell -ExecutionPolicy Bypass -File deploy.ps1
+
+az container logs --resource-group mazin --name python-face-recognition-container
