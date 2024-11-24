@@ -8,6 +8,6 @@ az container create `
   --dns-name-label python-face-recognition `
   --ports 80 `
   --os-type Linux `
-  --cpu 2 `
-  --memory 4 `
+  --cpu 1 `
+  --memory 3 `
   --restart-policy OnFailure
